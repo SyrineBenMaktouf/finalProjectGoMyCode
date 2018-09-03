@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enactus INAT PROJECTS</title>
+    <!-- Latest compiled and minified CSS Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/home.css">
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
+      type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" 
+      href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+      <link rel="icon" href="images/logo.png" type="image/png">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="nav">
+        <div class="enactus"><img style="width:80px;height:60px;" src="images/enactus logo gris.png"> </div>
+        
+        <ul>
+            <li>
+                <a href="home.html">Home</a>
+            </li>
+            <li>
+              <a href="whoarewe.html">Who are we</a>
+          </li>
+            <li>
+                <a href="team.html">The team</a>
+            </li>
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+            <li>
+                <a href="feedbacks.html">Feedbacks</a>
+            </li>
+            <li>
+                <a href="#footer">Contact</a>
+            </li>
+        </ul>
+    </div>
+<div class="container">
+    <h2>Coming soon ..</h2>
+</div>
+<!-- contact footer          -->
+<div class="footer" id="footer">
+    <div class="contact">
+  
+          <a href="https://www.facebook.com/EnactusINAT/?fb_dtsg_ag=AdwJsbVRgkEZ-9jZhM8J1MbDMvBSe4r5ngnaSHpDSqS38g%3AAdxf4vys6SStQJ3nohjFFfxnOJdA7HRmK7fY8TSN_hnYKg" > 
+          <i id="icon" class="fab fa-facebook fa-2x" style="color:black"></i></a>
+          <a href="https://www.instagram.com/enactus.inat/">
+            <i id="icon" class="fab fa-instagram fa-2x" style="color:black"></i></a>
+          <a href="https://www.youtube.com/channel/UCgt4gcfgOKidGyY1Nm2soBw">
+            <i id="icon" class="fab fa-youtube fa-2x" style="color:black"></i></a>
+  
+    </div>
+  <!-- map -->
+    <div id="map" style="width: 100%; height: 400px; background: grey" />
+  
+  </div>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  
+    <script  type="text/javascript" charset="UTF-8" >
+      
+  /**
+   * Moves the map to display over INATmoveMapToINAT
+   *
+   * @param  {H.Map} map      A HERE Map instance within the application
+   */
+  function moveMapToINAT(map){
+    map.setCenter({lat:36.829452, lng:10.181634});
+    map.setZoom(16);
+  }
+  
+  
+  
+  
+  
+  /**
+   * Boilerplate map initialization code starts below:
+   */
+  
+  //Step 1: initialize communication with the platform
+  var platform = new H.service.Platform({
+    app_id: 'devportal-demo-20180625',
+    app_code: '9v2BkviRwi9Ot26kp2IysQ',
+    useHTTPS: true
+  });
+  var pixelRatio = window.devicePixelRatio || 1;
+  var defaultLayers = platform.createDefaultLayers({
+    tileSize: pixelRatio === 1 ? 256 : 512,
+    ppi: pixelRatio === 1 ? undefined : 320
+  });
+  
+  //Step 2: initialize a map  - not specificing a location will give a whole world view.
+  var map = new H.Map(document.getElementById('map'),
+    defaultLayers.normal.map, {pixelRatio: pixelRatio});
+  
+  //Step 3: make the map interactive
+  // MapEvents enables the event system
+  // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+  var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+  behavior.disable(H.mapevents.Behavior.WHEELZOOM);
+  // Create the default UI components
+  var ui = H.ui.UI.createDefault(map, defaultLayers);
+  
+  // Now use the map as required...
+  moveMapToINAT(map);
+  
+    </script>
+  
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="./js/home.js"></script>
+</html>
